@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자스 필수패턴 12- DOM 이벤트 연결</title>
+  </head>
+
+  <body>
+    <!--ul>li3{button$} -->
+    <ul>
+      <li>button1</li>
+      <li>button2</li>
+      <li>button3</li>
+    </ul>
+
+    <script>
+      /*for of로 반복 ( 순서값이 필요없을 때)*/
+      const btns = document.querySelectorAll("li");
+
+      for (const el of btns) {
+        el.addEventListener("click", (e) => {
+          console.log(el);
+        });
+      }
+
+      /*
+    btns.forEach((btn, idx) => {
+      //console.log(btn);
+      //console.log(idx);
+      btns[idx].addEventListener('click', (e) => {
+        console.log(idx);
+        console.log(btns[idx])
+        //console.log(btn);
+        //console.log(e.currentTarget);
+      })
+    })
+    */
+    </script>
+  </body>
+</html>
